@@ -1,12 +1,16 @@
 <template lang='pug'>
 #app
   img.vue(src='./assets/logo.png')
+  sidebar
   router-view
 </template>
 
 <script>
+import Sidebar from './Sidebar'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: { Sidebar }
 }
 </script>
 
