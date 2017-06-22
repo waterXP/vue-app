@@ -1,31 +1,47 @@
 <template lang='pug'>
 #app
-  img.vue(src='./assets/logo.png')
-  sidebar
-  router-view
+  HeaderContainer#header
+  Sidebar
+  #content
+    router-view
 </template>
 
 <script>
 import Sidebar from './Sidebar'
+import HeaderContainer from './HeaderContainer'
 
 export default {
   name: 'app',
-  components: { Sidebar }
+  components: { Sidebar, HeaderContainer }
 }
 </script>
 
 <style lang='scss'>
-* { margin: 0; padding: 0 }
+@import './style.scss';
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  img.vue{
-    width: 80px;
-    height: auto;
-  }
+  position: relative;
+  color: $fontColor;
+  margin-top: $frameTopHeight;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $frameTopHeight;
+  background-color: $backColor;
+}
+#content {
+  position: absolute;
+  top: 0;
+  left: $frameSideWidthShrink;
+  padding: $panelPadding;
+}
+.expand + #content {
+  left: $frameSideWidth;
 }
 </style>

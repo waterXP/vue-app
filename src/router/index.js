@@ -9,7 +9,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/console',
       name: 'Console',
       component: Console
     }, {
@@ -21,5 +21,9 @@ export default new Router({
       name: 'Hello',
       component: Hello
     }
+    // , {
+    //   path: '*',
+    //   redirect: '/console'
+    // }
   ]
 })
