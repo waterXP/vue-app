@@ -1,5 +1,5 @@
 export default [
-  {
+  [{
     title: '管理中心',
     href: '/console',
     leaf: false,
@@ -10,11 +10,11 @@ export default [
     leaf: true,
     icon: 'fa-dashboard'
   }, {
-    title: '详情明细',
-    href: '/console/details',
+    title: '个人中心',
+    href: '/console/personal',
     leaf: true,
-    icon: 'fa-list'
-  }, {
+    icon: 'fa-id-card-o'
+  }], [{
     title: '渠道管理',
     href: '/proxy',
     leaf: false,
@@ -31,15 +31,15 @@ export default [
     icon: 'fa-money'
   }, {
     title: '二级代理商管理',
-    href: '/proxy/secAgents',
+    href: '/proxy/sec-agents',
     leaf: true,
     icon: 'fa-user'
   }, {
     title: '二级分润设置',
-    href: '/proxy/secProfits',
+    href: '/proxy/sec-profits',
     leaf: true,
     icon: 'fa-rmb'
-  }, {
+  }], [{
     title: '网吧部署',
     href: '/netbar',
     leaf: false,
@@ -54,7 +54,7 @@ export default [
     href: '/netbar/deploy',
     leaf: true,
     icon: 'fa-cloud-upload'
-  }, {
+  }], [{
     title: '系统设置',
     href: '/settings',
     leaf: false,
@@ -74,7 +74,7 @@ export default [
     href: '/settings/authority',
     leaf: true,
     icon: 'fa-grav'
-  }, {
+  }], [{
     title: '门店管理',
     href: '/store',
     leaf: false,
@@ -84,5 +84,5 @@ export default [
     href: '/store/bill',
     leaf: true,
     icon: 'fa-file-text-o'
-  }
+  }]
 ]

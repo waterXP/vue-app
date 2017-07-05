@@ -8,6 +8,7 @@ if (!process.env.NODE_ENV) {
 var opn = require('opn')
 var path = require('path')
 var express = require('express')
+var proxy = require('http-proxy-middleware')
 var webpack = require('webpack')
 var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = process.env.NODE_ENV === 'testing'
@@ -49,6 +50,15 @@ Object.keys(proxyTable).forEach(function (context) {
   }
   app.use(proxyMiddleware(options.filter || context, options))
 })
+
+app.use('/api', proxy({
+  // target: 'http://120.77.209.222/wagestest/',
+  target: 'http://172.16.2.175:8080/',
+  // target: 'http://yfl2.taofairy.com/wangbacms/',
+  // target: 'https://yfl2.taofairy.com/wangbacms/',
+  pathRewrite: { '^/api' : '' },
+  changeOrigin: true
+}))
 
 // handle fallback for HTML5 history API
 app.use(require('connect-history-api-fallback')())

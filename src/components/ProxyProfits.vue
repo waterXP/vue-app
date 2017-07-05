@@ -1,13 +1,15 @@
 <template lang='pug'>
-.console
+.proxy-profits
+  p proxy-profits
 </template>
 
 <script>
 export default {
-  name: 'console'
+  name: 'proxy-profits'
 }
 </script>
 
 <style scoped>
 
 </style>
+

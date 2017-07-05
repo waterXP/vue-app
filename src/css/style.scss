@@ -1,0 +1,68 @@
+$title: #1c2438;
+$content: #495060;
+$sub: #80848f;
+$disabled: #bbbec4;
+$border: #dddee1;
+$divider: #e9eaec;
+$background: #f8f8f9;
+
+$active: #5cb85c;
+$lightActive: #8ac57a;
+$darkActive: #5baf57;
+$primary: #2d8cf0;
+$lightPrimary: #5cadff;
+$darkPrimary: #3091f2;
+$success: #19be6b;
+$lightSuccess: #47cb89;
+$darkSuccess: #18b566;
+$warning: #ff9900;
+$lightWarning: #ffad33;
+$darkWarning: #f29100;
+$error: #ed3f14;
+$lightError: #f16543;
+$darkError: #e13c13;
+
+$sel: #f5f5f5;
+
+$panelPadding: 15px;
+
+$frameTopHeight: 50px;
+$frameSideWidth: 180px;
+$frameSideWidthShrink: 50px;
+
+$animate: 0.4s ease-in-out;
+$animateQuick: 0.2s ease-in-out;
+
+$fontFamily: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+$fontSize: 16px;
+
+.primary {
+  color: $primary;
+}
+
+.success {
+  color: $success;
+}
+
+.warning {
+  color: $warning;
+}
+
+.error {
+  color: $error;
+}
+
+* { margin: 0; padding: 0; }
+
+#sidebar .ivu-tooltip-rel {
+  width: 100%;
+}
+
+.ivu-input-group-prepend + .ivu-select > .ivu-select-selection {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.ivu-select-dropdown-list {
+  margin-bottom: 0;
+}
